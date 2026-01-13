@@ -26,7 +26,7 @@ export const PROPERTIES: Property[] = [
     sqft: 60,
     lat: 21.0210,
     lng: -86.8450,
-    image: 'https://eqansdofhuztzdghzhlz.supabase.co/storage/v1/object/sign/Xeelenja/4.%20Sala.jpeg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV84ODRmOTc4My1lZmY0LTRhYTItOWQ1Ni1lYTI5ZjY3MjIzNmIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJYZWVsZW5qYS80LiBTYWxhLmpwZWciLCJpYXQiOjE3NjgzMTkyNTIsImV4cCI6MTc5OTg1NTI1Mn0.Uf5EXGF-9Kyj8jzHOvS4YwpGUwt0b4AlxkuVxzY-34M',
+    image: 'https://eqansdofhuztzdghzhlz.supabase.co/storage/v1/object/sign/Xeelenja/freepik__generar-un-video-fotorrealista-que-d-vida-a-un-ren__14948-ezgif.com-video-to-webp-converter.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV84ODRmOTc4My1lZmY0LTRhYTItOWQ1Ni1lYTI5ZjY3MjIzNmIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJYZWVsZW5qYS9mcmVlcGlrX19nZW5lcmFyLXVuLXZpZGVvLWZvdG9ycmVhbGlzdGEtcXVlLWQtdmlkYS1hLXVuLXJlbl9fMTQ5NDgtZXpnaWYuY29tLXZpZGVvLXRvLXdlYnAtY29udmVydGVyLndlYnAiLCJpYXQiOjE3NjgyMzg2NzksImV4cCI6MTc5OTc3NDY3OX0.-58S0FwS6L6TZ7JGFJqdcIJh7HUshoO65Ix2au9E9ek',
     description: 'Una planta con espacios bien distribuidos: sala, cocina, comedor, dos recámaras, baño, área de servicio y alberca.',
     amenities: ['Pet Park', 'Área de juegos', 'Casa club', 'Cancha de pádel']
   },
@@ -35,27 +35,27 @@ export const PROPERTIES: Property[] = [
     title: 'Casa Tipo 02',
     location: 'A 20 minutos de Playa Nizuc',
     price: 'Consultar Precio',
-    beds: 2,
-    baths: 2.5,
+    beds: 3,
+    baths: 2,
     sqft: 121,
     lat: 21.0160,
     lng: -86.8520,
-    image: 'https://eqansdofhuztzdghzhlz.supabase.co/storage/v1/object/sign/Xeelenja/33.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV84ODRmOTc4My1lZmY0LTRhYTItOWQ1Ni1lYTI5ZjY3MjIzNmIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJYZWVsZW5qYS8zMy5wbmciLCJpYXQiOjE3NjgzMTU0MDksImV4cCI6MTc5OTg1MTQwOX0.3tKfNCNwlKP-OPKNyhHIWxMDir-l3nYvapjJtBA2PKM',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200',
     description: 'Dos plantas con espacios bien distribuidos: sala, cocina, comedor, dos recámaras, vestidor, baño, área de servicio y alberca.',
-    amenities: ['Pet Park', 'Área de juegos', 'Casa club', 'Cancha de pádel']
+    amenities: ['Jardín Zen', 'Paneles Solares', 'Jacuzzi Exterior', 'Bodega de Vinos']
   },
   {
     id: '4',
     title: 'Casa Tipo 03',
-    location: 'A 60 minutos de Playa del Carmen',
+    location: 'Costa Mujeres',
     price: 'Consultar Precio',
-    beds: 3,
-    baths: 2.5,
-    sqft: 121,
+    beds: 4,
+    baths: 3,
+    sqft: 240,
     lat: 21.0250,
     lng: -86.8400,
     image: 'https://eqansdofhuztzdghzhlz.supabase.co/storage/v1/object/sign/Xeelenja/freepik__generar-un-video-fotorrealista-que-d-vida-a-un-ren__14948-ezgif.com-video-to-webp-converter.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV84ODRmOTc4My1lZmY0LTRhYTItOWQ1Ni1lYTI5ZjY3MjIzNmIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJYZWVsZW5qYS9mcmVlcGlrX19nZW5lcmFyLXVuLXZpZGVvLWZvdG9ycmVhbGlzdGEtcXVlLWQtdmlkYS1hLXVuLXJlbl9fMTQ5NDgtZXpnaWYuY29tLXZpZGVvLXRvLXdlYnAtY29udmVydGVyLndlYnAiLCJpYXQiOjE3NjgyMzg2NzksImV4cCI6MTc5OTc3NDY3OX0.-58S0FwS6L6TZ7JGFJqdcIJh7HUshoO65Ix2au9E9ek',
-    description: 'Dos plantas con espacios bien distribuidos: sala, cocina, comedor, tres recámaras, vestidor, baño y área de servicio.',
-    amenities: ['Pet Park', 'Área de juegos', 'Casa club', 'Cancha de pádel']
+    description: 'La máxima expresión del lujo caribeño. Espacios abiertos y techos de doble altura integrados con la naturaleza.',
+    amenities: ['Cancha de Tenis', 'Casa de Huéspedes', 'Spa Privado', 'Chef Personal']
   }
 ];
