@@ -22,7 +22,7 @@ const GenericPage: React.FC<{ title: string; subtitle: string; icon: React.React
           muted 
           loop 
           playsInline 
-          className="w-full h-full object-cover opacity-30 grayscale-[20%]"
+          className="w-full h-full object-cover opacity-40 grayscale-[10%]"
         >
           <source src={videoUrl} type="video/mp4" />
         </video>
