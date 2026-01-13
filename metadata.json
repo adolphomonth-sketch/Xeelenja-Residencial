@@ -1,0 +1,8 @@
+{
+  "name": "Xeelenja - Luxury Real Estate Cancún",
+  "description": "An immersive, cinematic real estate experience for the most exclusive properties in Cancún, Mexico, featuring smooth scroll-driven animations and AI-powered property matching.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
