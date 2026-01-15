@@ -185,7 +185,7 @@ const MainExperience: React.FC<{ onSelect: (p: Property) => void }> = ({ onSelec
                 className="order-2 md:order-1"
               >
                 <h2 className="text-5xl md:text-7xl font-serif text-white mb-10 italic leading-tight">
-                  Que significa <br/> <span className="text-[#219EBC] not-italic">Xeelenja?</span>
+                  Qué significa <br/> <span className="text-[#219EBC] not-italic">Xeelenja?</span>
                 </h2>
                 <div className="w-20 h-[1px] bg-[#219EBC] mb-10" />
                 <div className="space-y-8 text-white/70 text-lg md:text-2xl font-light leading-relaxed">
@@ -194,7 +194,7 @@ const MainExperience: React.FC<{ onSelect: (p: Property) => void }> = ({ onSelec
                     XEELENJA, que en maya significa "Brisa del Mar", simboliza tranquilidad y conexion con la naturaleza.
                   </p>
                   <p>
-                    En este lugar, tu calidad de vida mejora, respaldada por una inversion segura. Cada dia en XEELENJA es una nueva oportunidad, y cada tarde, un momento de paz.
+                    En este lugar, tu calidad de vida mejora, respaldada por una inversión segura. Cada día en XEELENJA es una nueva oportunidad, y cada tarde, un momento de paz.
                   </p>
                 </div>
               </motion.div>
