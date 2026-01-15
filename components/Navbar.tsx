@@ -1,6 +1,5 @@
-
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Calendar } from 'lucide-react';
 import Logo from './Logo';
@@ -30,7 +29,8 @@ const Navbar: React.FC = () => {
     { name: 'INVERSIÓN', path: '/financiamiento' },
   ];
 
-  const menuVariants = {
+  // Explicitly type menuVariants to Variants to correctly infer ease array as a cubic-bezier tuple
+  const menuVariants: Variants = {
     closed: { opacity: 0, x: "100%", transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
     open: { opacity: 1, x: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
   };
