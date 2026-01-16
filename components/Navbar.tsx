@@ -23,10 +23,10 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: 'INICIO', path: '/' },
-    { name: 'PORTAFOLIO', path: '/portfolio' },
+    { name: 'CASAS', path: '/portfolio' },
     { name: 'TERRENOS', path: '/terrenos' },
     { name: 'AMENIDADES', path: '/amenidades' },
-    { name: 'INVERSIÓN', path: '/financiamiento' },
+    { name: 'FINANCIAMIENTO', path: '/financiamiento' },
   ];
 
   // Explicitly type menuVariants to Variants to correctly infer ease array as a cubic-bezier tuple

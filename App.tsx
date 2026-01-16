@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from 'react';
 import { HashRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'framer-motion';
@@ -294,10 +293,10 @@ const App: React.FC = () => {
             
             <div className="flex flex-wrap justify-center gap-12 text-[10px] tracking-[0.5em] font-bold text-white/20 uppercase">
                <Link to="/" className="hover:text-[#219EBC] transition-colors duration-500">Inicio</Link>
-               <Link to="/portfolio" className="hover:text-[#219EBC] transition-colors duration-500">Portafolio</Link>
+               <Link to="/portfolio" className="hover:text-[#219EBC] transition-colors duration-500">Casas</Link>
                <Link to="/terrenos" className="hover:text-[#219EBC] transition-colors duration-500">Terrenos</Link>
                <Link to="/amenidades" className="hover:text-[#219EBC] transition-colors duration-500">Amenidades</Link>
-               <Link to="/financiamiento" className="hover:text-[#219EBC] transition-colors duration-500">Inversion</Link>
+               <Link to="/financiamiento" className="hover:text-[#219EBC] transition-colors duration-500">Financiamiento</Link>
             </div>
             
             <div className="text-white/10 text-[8px] uppercase tracking-[0.4em] text-center max-w-2xl font-light leading-relaxed">
