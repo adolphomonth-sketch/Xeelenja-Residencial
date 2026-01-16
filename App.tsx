@@ -1,7 +1,8 @@
+
 import React, { useState, useRef } from 'react';
 import { HashRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'framer-motion';
-import { Star, CreditCard, LandPlot, X } from 'lucide-react';
+import { Star, CreditCard, LandPlot, X, Play } from 'lucide-react';
 import Navbar from './components/Navbar';
 import PropertyCard from './components/PropertyCard';
 import AIConcierge from './components/AIConcierge';
@@ -59,6 +60,108 @@ const GenericPage: React.FC<{ title: string; subtitle: string; icon: React.React
     </div>
   </PageTransition>
 );
+
+const AmenitiesPage: React.FC = () => {
+  const amenities = [
+    {
+      name: "Acceso controlado con caseta de vigilancia",
+      url: "https://eqansdofhuztzdghzhlz.supabase.co/storage/v1/object/sign/Xeelenja/Entrada%20Final%20(1).png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV84ODRmOTc4My1lZmY0LTRhYTItOWQ1Ni1lYTI5ZjY3MjIzNmIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJYZWVsZW5qYS9FbnRyYWRhIEZpbmFsICgxKS5wbmciLCJpYXQiOjE3Njg1OTg1MTAsImV4cCI6MTgwMDEzNDUxMH0.AJDgR2w6If7tUgaSkBSbfFE0uX9qoLrdly5yxCPEIgg",
+      type: 'image'
+    },
+    {
+      name: "Entorno selvático, limpio y seguro",
+      url: "https://eqansdofhuztzdghzhlz.supabase.co/storage/v1/object/sign/Xeelenja/grok-video-ac531ff8-ec7d-481c-9d23-0f504b5e5295%20(1).mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV84ODRmOTc4My1lZmY0LTRhYTItOWQ1Ni1lYTI5ZjY3MjIzNmIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJYZWVsZW5qYS9ncm9rLXZpZGVvLWFjNTMxZmY4LWVjN2QtNDgxYy05ZDIzLTBmNTA0YjVlNTI5NSAoMSkubXA0IiwiaWF0IjoxNzY4NTk2MjAwLCJleHAiOjE4MDAxMzIyMDB9.TWr2dek8gM7x5w7xQGSromHUYcBpNlIa7SXHmDtBhNk",
+      type: 'video'
+    },
+    {
+      name: "Espacios comerciales en zonas clave",
+      url: "https://eqansdofhuztzdghzhlz.supabase.co/storage/v1/object/sign/Xeelenja/freepik__generar-un-video-fotorrealista-que-d-vida-a-un-ren__53409-ezgif.com-video-to-webp-converter.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV84ODRmOTc4My1lZmY0LTRhYTItOWQ1Ni1lYTI5ZjY3MjIzNmIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJYZWVsZW5qYS9mcmVlcGlrX19nZW5lcmFyLXVuLXZpZGVvLWZvdG9ycmVhbGlzdGEtcXVlLWQtdmlkYS1hLXVuLXJlbl9fNTM0MDktZXpnaWYuY29tLXZpZGVvLXRvLXdlYnAtY29udmVydGVyLndlYnAiLCJpYXQiOjE3Njg1OTY2NjMsImV4cCI6MTgwMDEzMjY2M30.JNktU-YZgiWllU0V0nrNjA0432o13Zk7Zwuomjnuj7c",
+      type: 'image'
+    },
+    {
+      name: "Cancha de pádel",
+      url: "https://eqansdofhuztzdghzhlz.supabase.co/storage/v1/object/sign/Xeelenja/grok-video-ac71b273-2476-4d97-96d2-042afb36dc26-ezgif.com-video-to-webp-converter.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV84ODRmOTc4My1lZmY0LTRhYTItOWQ1Ni1lYTI5ZjY3MjIzNmIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJYZWVsZW5qYS9ncm9rLXZpZGVvLWFjNzFiMjczLTI0NzYtNGQ5Ny05NmQyLTA0MmFmYjM2ZGMyNi1lemdpZi5jb20tdmlkZW8tdG8td2VicC1jb252ZXJ0ZXIud2VicCIsImlhdCI6MTc2ODU5NTk0MiwiZXhwIjoxODAwMTMxOTQyfQ.XZPDSIzgI3QNJc2X-BVjFPHn-zOq3fWEo8gSHfFpXKM",
+      type: 'image'
+    },
+    {
+      name: "Moderna casa club para reuniones",
+      url: "https://eqansdofhuztzdghzhlz.supabase.co/storage/v1/object/sign/Xeelenja/Club%20house%20final.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV84ODRmOTc4My1lZmY0LTRhYTItOWQ1Ni1lYTI5ZjY3MjIzNmIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJYZWVsZW5qYS9DbHViIGhvdXNlIGZpbmFsLnBuZyIsImlhdCI6MTc2ODU5NTkxMSwiZXhwIjoxODAwMTMxOTExfQ.BmfywCn6xApA-bIiO9DOjLTQdRyYQBGonNcLdyoTDUY",
+      type: 'image'
+    },
+    {
+      name: "Alberca rodeada de vegetación",
+      url: "https://eqansdofhuztzdghzhlz.supabase.co/storage/v1/object/sign/Xeelenja/Piscina%20final.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV84ODRmOTc4My1lZmY0LTRhYTItOWQ1Ni1lYTI5ZjY3MjIzNmIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJYZWVsZW5qYS9QaXNjaW5hIGZpbmFsLnBuZyIsImlhdCI6MTc2ODU5ODU0NSwiZXhwIjoxODAwMTM0NTQ1fQ.GTyy9A0_Tif3BoSO0dOBGrhO9AR1W7PN5k03KZqLU8o",
+      type: 'image'
+    },
+    {
+      name: "Carril para correr entre senderos naturales",
+      url: "https://eqansdofhuztzdghzhlz.supabase.co/storage/v1/object/sign/Xeelenja/Corredor%20final%20(2).png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV84ODRmOTc4My1lZmY0LTRhYTItOWQ1Ni1lYTI5ZjY3MjIzNmIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJYZWVsZW5qYS9Db3JyZWRvciBmaW5hbCAoMikucG5nIiwiaWF0IjoxNzY4NTk2Njk1LCJleHAiOjE4MDAxMzI2OTV9.CIeZZPE1Xk7nPBdnXEpKZi6NGCe9qI9O9wm3gryhHnM",
+      type: 'image'
+    },
+    {
+      name: "Pet park para tus mascotas",
+      url: "https://eqansdofhuztzdghzhlz.supabase.co/storage/v1/object/sign/Xeelenja/Zona%20de%20perros%20final.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV84ODRmOTc4My1lZmY0LTRhYTItOWQ1Ni1lYTI5ZjY3MjIzNmIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJYZWVsZW5qYS9ab25hIGRlIHBlcnJvcyBmaW5hbC5wbmciLCJpYXQiOjE3Njg1OTgyNDUsImV4cCI6MTgwMDEzNDI0NX0.mO2PHaeBxdtP7u8zfp2BP7NWyqxn1157fMnoBREe3RE",
+      type: 'image'
+    },
+    {
+      name: "Área de juegos infantiles",
+      url: "https://eqansdofhuztzdghzhlz.supabase.co/storage/v1/object/sign/Xeelenja/Zona%20de%20juegos%20final.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV84ODRmOTc4My1lZmY0LTRhYTItOWQ1Ni1lYTI5ZjY3MjIzNmIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJYZWVsZW5qYS9ab25hIGRlIGp1ZWdvcyBmaW5hbC5wbmciLCJpYXQiOjE3Njg1OTgyNjAsImV4cCI6MTgwMDEzNDI2MH0.2I0yL0FIcWSr-3gDoZqVI5aEu1TOkacYEtfVjcIAfdE",
+      type: 'image'
+    }
+  ];
+
+  return (
+    <PageTransition>
+      <div className="bg-[#001529] pt-48 pb-64 px-8 md:px-24 min-h-screen">
+        <div className="max-w-7xl mx-auto mb-32">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-6xl md:text-9xl font-serif mb-12 font-light text-white tracking-tighter leading-tight"
+          >
+            Amenidades <br/> <span className="text-[#219EBC] italic">que inspiran bienestar</span>
+          </motion.h2>
+          <div className="w-24 h-[1px] bg-[#219EBC] mb-12" />
+          <p className="text-white/60 text-xl md:text-3xl max-w-4xl font-light leading-relaxed">
+            En Xeelenja, cada espacio ha sido pensado para conectar con la naturaleza y elevar tu estilo de vida:
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          {amenities.map((item, idx) => (
+            <motion.div 
+              key={idx}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1 }}
+              className="group relative overflow-hidden rounded-[40px] aspect-[4/5] bg-white/5 border border-white/10"
+            >
+              {item.type === 'video' ? (
+                <video 
+                  autoPlay 
+                  muted 
+                  loop 
+                  playsInline 
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                >
+                  <source src={item.url} type="video/mp4" />
+                </video>
+              ) : (
+                <img src={item.url} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt={item.name} />
+              )}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#000c18] via-transparent to-transparent opacity-80" />
+              <div className="absolute bottom-10 left-10 right-10">
+                <p className="text-white text-xl md:text-2xl font-serif italic mb-2">{item.name}</p>
+                <div className="w-10 h-[1px] bg-[#219EBC] group-hover:w-full transition-all duration-700" />
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </PageTransition>
+  );
+};
 
 const PropertyModal: React.FC<{ property: Property, onClose: () => void }> = ({ property, onClose }) => {
   return (
@@ -274,7 +377,7 @@ const App: React.FC = () => {
             />
             <Route 
               path="/amenidades" 
-              element={<GenericPage title="Amenidades" subtitle="Santuarios de serenidad y distincion" icon={<Star />} />} 
+              element={<AmenitiesPage />} 
             />
             <Route 
               path="/financiamiento" 
