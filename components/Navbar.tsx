@@ -9,6 +9,7 @@ const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
   const partnerLogoUrl = "https://eqansdofhuztzdghzhlz.supabase.co/storage/v1/object/sign/Xeelenja/LOGO%20FULL%20BLANCO.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV84ODRmOTc4My1lZmY0LTRhYTItOWQ1Ni1lYTI5ZjY3MjIzNmIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJYZWVsZW5qYS9MT0dPIEZVTEwgQkxBTkNPLnBuZyIsImlhdCI6MTc2ODMxMzUxNywiZXhwIjoxNzk5ODQ5NTE3fQ.cOuvYlHs-piOjx2C5uyZqua6jqa7Adr03DHYRSWdzFo";
+  const whatsappUrl = "https://wa.me/529987629707?text=Hola%20Xeelenja%2C%20quiero%20informes%20de%20casas%20y%20lotes%20en%20Canc%C3%BAn.%20%F0%9F%8F%A1%F0%9F%8C%BF";
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -85,7 +86,9 @@ const Navbar: React.FC = () => {
 
         <div className="flex items-center gap-4">
           <a 
-            href="#" 
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden sm:flex text-[9px] uppercase tracking-[0.25em] border border-white/20 hover:border-[#219EBC] hover:text-[#219EBC] px-6 py-3 rounded-full transition-all duration-500 font-bold text-white/90 bg-white/5 backdrop-blur-md"
           >
             AGENDAR CITA
@@ -137,10 +140,15 @@ const Navbar: React.FC = () => {
               transition={{ delay: 0.8 }}
               className="mt-20 w-full max-w-xs"
             >
-              <button className="w-full py-6 bg-[#219EBC] text-[#001529] rounded-2xl font-bold uppercase tracking-[0.3em] text-[10px] flex items-center justify-center gap-4 shadow-2xl shadow-[#219EBC]/20">
+              <a 
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-6 bg-[#219EBC] text-[#001529] rounded-2xl font-bold uppercase tracking-[0.3em] text-[10px] flex items-center justify-center gap-4 shadow-2xl shadow-[#219EBC]/20 transition-transform active:scale-95"
+              >
                 <Calendar className="w-4 h-4" />
                 Agendar Cita
-              </button>
+              </a>
             </motion.div>
 
             <div className="absolute bottom-12 flex flex-col items-center gap-6 opacity-30">
