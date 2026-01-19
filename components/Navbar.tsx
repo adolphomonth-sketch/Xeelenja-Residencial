@@ -9,6 +9,7 @@ const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
   const partnerLogoUrl = "https://eqansdofhuztzdghzhlz.supabase.co/storage/v1/object/sign/Xeelenja/LOGO%20FULL%20BLANCO.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV84ODRmOTc4My1lZmY0LTRhYTItOWQ1Ni1lYTI5ZjY3MjIzNmIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJYZWVsZW5qYS9MT0dPIEZVTEwgQkxBTkNPLnBuZyIsImlhdCI6MTc2ODMxMzUxNywiZXhwIjoxNzk5ODQ5NTE3fQ.cOuvYlHs-piOjx2C5uyZqua6jqa7Adr03DHYRSWdzFo";
+  const fullnesslandUrl = "https://www.fullnessland.com/";
   const whatsappUrl = "https://wa.me/529987629707?text=Hola%20Xeelenja%2C%20quiero%20informes%20de%20casas%20y%20lotes%20en%20Canc%C3%BAn.%20%F0%9F%8F%A1%F0%9F%8C%BF";
 
   useEffect(() => {
@@ -55,15 +56,24 @@ const Navbar: React.FC = () => {
         }`}
       >
         <div className="flex items-center gap-4 md:gap-10">
-          <Link to="/" className="flex items-center gap-3 md:gap-8 group">
-            <Logo className="w-20 md:w-32" showSubtext={false} />
+          <div className="flex items-center gap-3 md:gap-8">
+            <Link to="/" className="flex items-center group">
+              <Logo className="w-20 md:w-32" showSubtext={false} />
+            </Link>
             <div className="w-[1px] h-6 md:h-12 bg-white/20" />
-            <img 
-              src={partnerLogoUrl} 
-              alt="Partner Logo" 
-              className="h-6 md:h-9 w-auto object-contain opacity-50 group-hover:opacity-100 transition-opacity duration-500"
-            />
-          </Link>
+            <a 
+              href={fullnesslandUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex items-center group"
+            >
+              <img 
+                src={partnerLogoUrl} 
+                alt="Partner Logo" 
+                className="h-6 md:h-9 w-auto object-contain opacity-50 group-hover:opacity-100 transition-opacity duration-500"
+              />
+            </a>
+          </div>
           
           {/* Desktop Links */}
           <div className="hidden xl:flex gap-10 text-[9px] tracking-[0.4em] font-bold text-white/70">

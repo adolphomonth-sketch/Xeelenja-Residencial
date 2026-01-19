@@ -11,6 +11,7 @@ import { PROPERTIES } from './constants';
 import { Property, Section } from './types';
 
 const partnerLogoUrl = "https://eqansdofhuztzdghzhlz.supabase.co/storage/v1/object/sign/Xeelenja/LOGO%20FULL%20BLANCO.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV84ODRmOTc4My1lZmY0LTRhYTItOWQ1Ni1lYTI5ZjY3MjIzNmIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJYZWVsZW5qYS9MT0dPIEZVTEwgQkxBTkNPLnBuZyIsImlhdCI6MTc2ODMxMzUxNywiZXhwIjoxNzk5ODQ5NTE3fQ.cOuvYlHs-piOjx2C5uyZqua6jqa7Adr03DHYRSWdzFo";
+const fullnesslandUrl = "https://www.fullnessland.com/";
 const terrenosVideoUrl = "https://eqansdofhuztzdghzhlz.supabase.co/storage/v1/object/sign/Xeelenja/grok-video-ac531ff8-ec7d-481c-9d23-0f504b5e5295%20(1).mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV84ODRmOTc4My1lZmY0LTRhYTItOWQ1Ni1lYTI5ZjY3MjIzNmIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJYZWVsZW5qYS9ncm9rLXZpZGVvLWFjNTMxZmY4LWVjN2QtNDgxYy05ZDIzLTBmNTA0YjVlNTI5NSAoMSkubXA0IiwiaWF0IjoxNzY4MzE0Mjc0LCJleHAiOjE3OTk4NTAyNzR9.qbQ1XdEh26gXIaZHPpNknCj0MwthGfFKOcZ7Vhb8L90";
 const xeelenjaMeaningImg = "https://eqansdofhuztzdghzhlz.supabase.co/storage/v1/object/sign/Xeelenja/58406.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV84ODRmOTc4My1lZmY0LTRhYTItOWQ1Ni1lYTI5ZjY3MjIzNmIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJYZWVsZW5qYS81ODQwNi5qcGciLCJpYXQiOjE3Njg0OTQ0MzYsImV4cCI6MTgwMDAzMDQzNn0.aNRd5ZMkzrV4gAsMUSXiaflVEsfjlS-ZzPX72_Jla88";
 
@@ -314,7 +315,7 @@ const MainExperience: React.FC<{ onSelect: (p: Property) => void }> = ({ onSelec
             </div>
 
             <div className="max-w-7xl mx-auto mb-48 text-center md:text-left">
-              <h2 className="text-7xl md:text-9xl font-serif mb-10 font-light text-white tracking-tight">Tipologia</h2>
+              <h2 className="text-7xl md:text-9xl font-serif mb-10 font-light text-white tracking-tight">Casas</h2>
               <div className="w-24 h-[1px] bg-[#219EBC] mb-8" />
               <p className="text-[#8ECAE6] text-[11px] tracking-[0.8em] uppercase font-bold opacity-70">EXCLUSIVIDAD REDEFINIDA</p>
             </div>
@@ -391,7 +392,9 @@ const App: React.FC = () => {
             <div className="flex items-center gap-8 md:gap-12 opacity-40 hover:opacity-100 transition-opacity duration-1000">
               <Logo className="w-32 md:w-40" showSubtext={false} />
               <div className="w-[1px] h-12 md:h-16 bg-white/20" />
-              <img src={partnerLogoUrl} alt="Partner Logo" className="h-10 md:h-14 w-auto object-contain" />
+              <a href={fullnesslandUrl} target="_blank" rel="noopener noreferrer">
+                <img src={partnerLogoUrl} alt="Partner Logo" className="h-10 md:h-14 w-auto object-contain cursor-pointer" />
+              </a>
             </div>
             
             <div className="flex flex-wrap justify-center gap-12 text-[10px] tracking-[0.5em] font-bold text-white/20 uppercase">
