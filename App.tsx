@@ -14,6 +14,8 @@ const partnerLogoUrl = "https://eqansdofhuztzdghzhlz.supabase.co/storage/v1/obje
 const fullnesslandUrl = "https://www.fullnessland.com/";
 const terrenosVideoUrl = "https://eqansdofhuztzdghzhlz.supabase.co/storage/v1/object/sign/Xeelenja/grok-video-ac531ff8-ec7d-481c-9d23-0f504b5e5295%20(1).mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV84ODRmOTc4My1lZmY0LTRhYTItOWQ1Ni1lYTI5ZjY3MjIzNmIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJYZWVsZW5qYS9ncm9rLXZpZGVvLWFjNTMxZmY4LWVjN2QtNDgxYy05ZDIzLTBmNTA0YjVlNTI5NSAoMSkubXA0IiwiaWF0IjoxNzY4MzE0Mjc0LCJleHAiOjE3OTk4NTAyNzR9.qbQ1XdEh26gXIaZHPpNknCj0MwthGfFKOcZ7Vhb8L90";
 const xeelenjaMeaningImg = "https://eqansdofhuztzdghzhlz.supabase.co/storage/v1/object/sign/Xeelenja/58406.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV84ODRmOTc4My1lZmY0LTRhYTItOWQ1Ni1lYTI5ZjY3MjIzNmIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJYZWVsZW5qYS81ODQwNi5qcGciLCJpYXQiOjE3Njg0OTQ0MzYsImV4cCI6MTgwMDAzMDQzNn0.aNRd5ZMkzrV4gAsMUSXiaflVEsfjlS-ZzPX72_Jla88";
+const fullnesslandPrincipalLogo = "https://eqansdofhuztzdghzhlz.supabase.co/storage/v1/object/sign/Xeelenja/LOGO%20FULLNESSLAND%20PRINCIPAL.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV84ODRmOTc4My1lZmY0LTRhYTItOWQ1Ni1lYTI5ZjY3MjIzNmIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJYZWVsZW5qYS9MT0dPIEZVTExORVNTTEFORCBQUklOQ0lQQUwucG5nIiwiaWF0IjoxNzY4OTEyNzA2LCJleHAiOjE4MDA0NDg3MDZ9.c0klDYV6mur640sD6W8BE_9PcyV9R0bdoIvHKKQGotQ";
+const inmopavLogo = "https://eqansdofhuztzdghzhlz.supabase.co/storage/v1/object/sign/Xeelenja/LOGO%20INMOPAV.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV84ODRmOTc4My1lZmY0LTRhYTItOWQ1Ni1lYTI5ZjY3MjIzNmIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJYZWVsZW5qYS9MT0dPIElOTU9QQVYucG5nIiwiaWF0IjoxNzY4OTEyNzIxLCJleHAiOjE4MDA0NDg3MjF9.StWAz-IGHS3UZUsJI02eOtZyqGO7H04-UftPeHcyh4k";
 
 const PageTransition: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <motion.div
@@ -233,7 +235,7 @@ const MainExperience: React.FC<{ onSelect: (p: Property) => void }> = ({ onSelec
 
   return (
     <PageTransition>
-      <div ref={containerRef} className="relative min-h-[500vh]">
+      <div ref={containerRef} className="relative min-h-[600vh]">
         <div className="fixed inset-0 z-0 bg-[#001529]">
           <div className="absolute inset-0 bg-gradient-to-b from-[#000c18]/80 via-[#001529]/40 to-[#001529] z-10" />
           <img 
@@ -279,6 +281,7 @@ const MainExperience: React.FC<{ onSelect: (p: Property) => void }> = ({ onSelec
         <section className="relative z-30 pt-32 pb-32 px-6 md:px-24 bg-transparent">
           <motion.div style={{ opacity: contentReveal }}>
             
+            {/* Qué significa Xeelenja */}
             <div className="max-w-7xl mx-auto mb-64 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
               <motion.div 
                 initial={{ opacity: 0, x: -50 }}
@@ -314,6 +317,61 @@ const MainExperience: React.FC<{ onSelect: (p: Property) => void }> = ({ onSelec
               </motion.div>
             </div>
 
+            {/* ¿Quiénes somos? Section */}
+            <div className="max-w-7xl mx-auto mb-64">
+              <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.2 }}
+                viewport={{ once: true }}
+                className="mb-24 text-center md:text-left"
+              >
+                <h2 className="text-6xl md:text-9xl font-serif mb-10 font-light text-white tracking-tight italic leading-none">¿Quiénes somos?</h2>
+                <div className="w-24 h-[1px] bg-[#219EBC]" />
+              </motion.div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
+                {/* FULLNESSLAND */}
+                <motion.div 
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1.2 }}
+                  viewport={{ once: true }}
+                  className="space-y-12 flex flex-col"
+                >
+                  <div className="h-28 md:h-36 flex items-start">
+                    <img src={fullnesslandPrincipalLogo} className="h-full w-auto object-contain" alt="FULLNESSLAND Logo" />
+                  </div>
+                  <div className="space-y-6">
+                    <h3 className="text-3xl font-serif text-white italic">FULLNESSLAND</h3>
+                    <p className="text-white/60 text-lg md:text-xl font-light leading-relaxed">
+                      Nos dedicamos a conceptualizar, habilitar y desarrollar proyectos de tierra en México y en destinos estratégicos del mundo. Hoy, nuestros desarrollos principales están en El Bajío y la Riviera Maya, donde creamos ciudades con comunidades integradas, eficientes y diferenciadas. Impulsamos la innovación con prácticas de clase mundial, respetando la esencia de cada espacio y el interés del mercado, para construir ecosistemas sólidos y funcionales. Además, generamos oportunidades de inversión en etapas tempranas para proteger el patrimonio y potenciar el crecimiento del capital.
+                    </p>
+                  </div>
+                </motion.div>
+
+                {/* INMOPAV */}
+                <motion.div 
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1.2, delay: 0.2 }}
+                  viewport={{ once: true }}
+                  className="space-y-12 flex flex-col"
+                >
+                  <div className="h-28 md:h-36 flex items-start">
+                    <img src={inmopavLogo} className="h-full w-auto object-contain" alt="INMOPAV Logo" />
+                  </div>
+                  <div className="space-y-6">
+                    <h3 className="text-3xl font-serif text-white italic">Ingeniería y Construcción INMOPAV S.A. de C.V.</h3>
+                    <p className="text-white/60 text-lg md:text-xl font-light leading-relaxed">
+                      Es una empresa fundada en 2012, enfocada en la elaboración, ejecución y dirección de obras de infraestructura y construcción. Contamos con experiencia en proyectos de alto impacto, como la nueva sede del Senado de la República, el puente inter pista del Aeropuerto Internacional de Cancún, la terminal portuaria de contenedores de Lázaro Cárdenas (Michoacán) y la remodelación de imagen urbana de Av. Presidente Masaryk.
+                    </p>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+
+            {/* Casas Section */}
             <div className="max-w-7xl mx-auto mb-48 text-center md:text-left">
               <h2 className="text-7xl md:text-9xl font-serif mb-10 font-light text-white tracking-tight">Casas</h2>
               <div className="w-24 h-[1px] bg-[#219EBC] mb-8" />
